@@ -24,11 +24,29 @@ public class MatrixRustSdkModule extends NativeMatrixRustSdkSpec {
   }
 
   private static native double nativeMultiply(double a, double b);
+  private static native boolean nativeInstallRustCrate(long rtPtr, boolean a);
+  private static native boolean nativeCleanupRustCrate(long rtPtr, boolean a);
 
   // Example method
   // See https://reactnative.dev/docs/native-modules-android
   @Override
   public double multiply(double a, double b) {
     return nativeMultiply(a, b);
+  }
+
+  @Override
+  public boolean installRustCrate(boolean rt) {
+    return nativeInstallRustCrate(
+      this.getReactApplicationContext().getJavaScriptContextHolder().get(),
+      rt
+    );
+  }
+
+  @Override
+  public boolean cleanupRustCrate(boolean rt) {
+    return nativeCleanupRustCrate(
+      this.getReactApplicationContext().getJavaScriptContextHolder().get(),
+      rt
+    );
   }
 }
