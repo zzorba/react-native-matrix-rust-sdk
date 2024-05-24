@@ -26,6 +26,8 @@
     "!**/.*"
   ],
   "scripts": {
+    "generate": "./scripts/bootstrap.sh --no-cpp",
+    "fmt": "prettier -w '**/*.{ts,tsx}'",
     "example": "yarn workspace react-native-matrix-rust-sdk-example",
     "test": "jest",
     "typecheck": "tsc --noEmit",
@@ -71,7 +73,8 @@
     "react-native-builder-bob": "^0.23.2",
     "release-it": "^15.0.0",
     "turbo": "^1.10.7",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "uniffi-bindgen-react-native": "https://github.com/jhugman/uniffi-bindgen-react-native"
   },
   "resolutions": {
     "@types/react": "^18.2.44"
