@@ -13,12 +13,12 @@ if(NOT DEFINED REACT_ANDROID_DIR)
     set(REACT_ANDROID_DIR "${REACT_NATIVE_PATH}/ReactAndroid")
 endif()
 
-# include_directories(
+include_directories(
 #     ${REACT_NATIVE_PATH}/React
 #     ${REACT_NATIVE_PATH}/React/Base
 #     ${REACT_NATIVE_PATH}/ReactCommon     # API
-#     ${REACT_NATIVE_PATH}/ReactCommon/jsi # API/src
-# )
+    ${REACT_NATIVE_PATH}/ReactCommon/jsi # API/src
+)
 
 # Specifies a path to native header files.
 include_directories(

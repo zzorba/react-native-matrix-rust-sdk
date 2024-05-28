@@ -14,15 +14,13 @@ namespace uniffi_generated {
       return static_cast<ObjCTurboModule&>(turboModule).invokeObjCMethod(rt, NumberKind, "multiply", @selector(multiply:b:), args, count);
     }
     static facebook::jsi::Value __hostFunction_MatrixRustSdk_installRustCrate(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
-        uint64_t rtPtr = 0;
         uint8_t a = 0;
-        uint8_t result = matrixrustsdk::installRustCrate((uint64_t) rtPtr, a);
+        uint8_t result = matrixrustsdk::installRustCrate(rt, a);
         return facebook::jsi::Value(rt, result);
     }
     static facebook::jsi::Value __hostFunction_MatrixRustSdk_cleanupRustCrate(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
-        uint64_t rtPtr = 0;
         uint8_t a = 0;
-        uint8_t result = matrixrustsdk::cleanupRustCrate((uint64_t) rtPtr, a);
+        uint8_t result = matrixrustsdk::cleanupRustCrate(rt, a);
         return facebook::jsi::Value(rt, result);
     }
 
