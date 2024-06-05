@@ -54,9 +54,6 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
-  "dependencies": {
-    "uniffi-bindgen-react-native": "git+https://github.com/jhugman/uniffi-bindgen-react-native.git#build_and_export_js"
-  },
   "devDependencies": {
     "@commitlint/config-conventional": "^17.0.2",
     "@evilmartians/lefthook": "^1.5.0",
@@ -83,7 +80,8 @@
   },
   "peerDependencies": {
     "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "uniffi-bindgen-react-native": "*"
   },
   "workspaces": [
     "example"
